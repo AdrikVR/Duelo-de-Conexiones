@@ -227,7 +227,7 @@ document.addEventListener('DOMContentLoaded', () => {
         if (secondPlace) {
             prizesHTML += `<li><strong>2do Lugar:</strong> ${secondPlace.name} &rarr; 1 sello</li>`;
         }
-        prizesHTML += `<li><strong>Último Lugar:</strong> ${lastPlacePlayers} &rarr; -1 punto en su exposición</li>`;
+        prizesHTML += `<li><strong>Último Lugar:</strong> ${lastPlacePlayers} &rarr; Castigo Random</li>`;
         prizesHTML += '</ul>';
         prizesContainer.innerHTML = prizesHTML;
 
