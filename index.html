@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Duelo de Conexiones</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div id="start-screen" class="screen active">
+        <h1>Duelo de Conexiones</h1>
+        
+        <div id="rules-container">
+            <h2>Reglas del Juego</h2>
+            <ol>
+                <li>Cada equipo podrá elegir una pregunta de cualquier sección y cualquier valor.</li>
+                <li>Una respuesta correcta sumará puntos y una incorrecta los restará.</li>
+                <li>Tienes <strong>12 segundos</strong> para responder.</li>
+                <li>No usar IA para las respuestas.</li>
+                <li>Deberá contestar la pregunta el miembro que la seleccionó.</li>
+                <li>En caso de romperse una regla, el anfitrión no seleccionará una respuesta.</li>
+                <li>El Ganador y el segundo lugar tendrán un premio y el último lugar un castigo.</li>
+                <li>El castigo podra ser realizado por todos los integrantes o por un representante.</li>
+            </ol>
+        </div>
+
+        <div class="punishment-box">
+            <h3>Caja de Castigos</h3>
+            <ul>
+                <li><strong>1:</strong> Bailar 10 segundos la canción que prefieran.</li>
+                <li><strong>2:</strong> Presentarse con acento yucateco.</li>
+                <li><strong>3:</strong> Hacer 15 sentadillas.</li>
+                <li><strong>4:</strong> Imitar a un animal por 10 segundos.</li>
+                <li><strong>5:</strong> Contar un chiste.</li>
+            </ul>
+        </div>
+
+        <p>Selecciona el número de jugadores:</p>
+        <select id="player-count">
+            <option value="3">3 Equipos</option>
+            <option value="4">4 Equipos</option>
+            <option value="5">5 Equipos</option>
+            <option value="6">6 Equipos</option>
+        </select>
+        <button id="start-btn">Iniciar Juego</button>
+    </div>
+
+    <div id="game-screen" class="screen">
+        <header>
+            <h1>Duelo de Conexiones</h1>
+            <div id="scoreboard"></div>
+            <div id="turn-indicator"></div>
+        </header>
+        <main id="game-board"></main>
+    </div>
+
+    <div id="question-modal" class="modal-overlay">
+        <div class="modal-content">
+            <div id="timer-display"></div>
+            <h2 id="question-text"></h2>
+            <div id="answer-options"></div>
+        </div>
+    </div>
+
+    <div id="end-screen" class="screen">
+        <h1>¡Juego Terminado!</h1>
+        <h3>Resultados Finales:</h3>
+        <ul id="final-scores"></ul>
+        <div id="prizes-container"></div>
+        <button id="punishment-btn" style="display: none;"></button>
+        <button onclick="window.location.reload()">Jugar de Nuevo</button>
+    </div>
+
+    <div id="roulette-modal" class="modal-overlay">
+        <div class="modal-content">
+            <h2>Ruleta de Castigo</h2>
+            <div id="roulette-display">?</div>
+            <div id="roulette-result"></div>
+            <button id="close-roulette-btn" style="display: none;">Cerrar</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
